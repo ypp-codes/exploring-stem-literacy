@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const LogoText = () => {
 	const { scrollY } = useScroll();
-	const [scrolled, setScrolled] = useState(false);
+	// const [scrolled, setScrolled] = useState(false);
 	const [hasAnimated, setHasAnimated] = useState(false);
 	const initDelay = 1.5
 

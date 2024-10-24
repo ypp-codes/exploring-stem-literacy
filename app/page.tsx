@@ -13,8 +13,6 @@ import {
   ServerIcon,
 } from '@heroicons/react/20/solid'
 import Image from "next/image"
-import ESLLogo from "@/public/favicon.png"
-import YPPLogo from "@/public/YPP-Logo-white.webp"
 // import BPSLogo from "@/public/bps-logo-w.png"
 import Hexagons from "@/public/hexagons.svg"
 import Triangles from "@/public/triangles.svg"
