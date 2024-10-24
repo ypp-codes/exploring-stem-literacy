@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: "#00A973",
+        secondary: "#05714F",
+      },
+      fontFamily: {
+        display: ["var(--font-space-grotesk)", "sans-serif"],
+        logo: ["var(--font-argon)", "monospace"]
       },
     },
   },
