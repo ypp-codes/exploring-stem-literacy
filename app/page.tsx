@@ -135,14 +135,15 @@ export default function Example() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const bannerHeight = document.getElementById("hero").offsetHeight;
+    const bannerElement = document.getElementById("hero");
+    const bannerHeight = bannerElement ? bannerElement.offsetHeight : 0;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > (bannerHeight - 130));
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [document]);
 
   return (
     <div className="bg-white">
@@ -235,14 +236,14 @@ export default function Example() {
       <main>
         {/* Hero section */}
         <div id="hero" className="relative isolate overflow-hidden h-[750px] sm:h-auto bg-slate-900 pb-16 pt-14 sm:pb-20">
-        <FilterImage
+          <FilterImage
             alt="students excited about computer science"
             src={Epiphany}
             bgClasses=""
             width={700}
             className="absolute hidden sm:block right-0 bottom-0 w-[500px] lg:w-[700px] z-0 brightness-125 opacity-70"
           />
-        <FilterImage
+          <FilterImage
             alt="students excited about computer science"
             src={BigSmiles}
             bgClasses=""
@@ -265,7 +266,7 @@ export default function Example() {
             <div className="w-full h-1/2 absolute top-1/2 bg-gradient-to-b from-transparent to-slate-900">
             </div>
           </div>
- 
+
 
           {/* Hero Text Section */}
           <div className="mx-auto max-w-7xl px-6 lg:px-8">

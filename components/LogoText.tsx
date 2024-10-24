@@ -10,15 +10,15 @@ const LogoText = () => {
 	const [hasAnimated, setHasAnimated] = useState(false);
 	const initDelay = 1.5
 
-	useEffect(() => {
-		return scrollY.onChange((latest) => {
-			if (latest > 0) {
-				setScrolled(true);
-			} else {
-				setScrolled(false);
-			}
-		});
-	}, [scrollY]);
+	// useEffect(() => {
+	// 	return scrollY.onChange((latest) => {
+	// 		if (latest > 0) {
+	// 			setScrolled(true);
+	// 		} else {
+	// 			setScrolled(false);
+	// 		}
+	// 	});
+	// }, [scrollY]);
 
 	return (
 		<div className="flex space-x-2 font-logo font-semibold">
