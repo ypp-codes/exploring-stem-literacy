@@ -84,24 +84,27 @@ export default function Example() {
             })}
           </div>
         </nav>
-        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+        <Dialog
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+          transition
+          className="lg:hidden"
+        >
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-900 bg-opacity-80 backdrop-blur-md px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5 text-black font-logo font-semibold">
-                Exploring STEM Literacy
-              </a>
+              <LogoText />
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 rounded-md p-2.5 text-slate-200"
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="h-6 w-6" />
               </button>
             </div>
             <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="-my-6 divide-y divide-gray-300/70">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => {
                     if (item.name !== "spacer")
@@ -109,14 +112,12 @@ export default function Example() {
                         <a
                           key={item.name}
                           href={item.href}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:bg-slate-700"
                         >
                           {item.name}
                         </a>
                       )
                   })}
-                </div>
-                <div className="py-6">
                 </div>
               </div>
             </div>
@@ -282,7 +283,7 @@ export default function Example() {
         {/* Get Involved */}
         <section className="bg-slate-900 text-white py-16 text-center relative">
           <div className="mt-6 space-x-4">
-          &copy; The Young People's Project {new Date().getFullYear()}.
+            &copy; The Young People's Project {new Date().getFullYear()}.
           </div>
           <Image
             alt=""
