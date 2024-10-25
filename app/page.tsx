@@ -15,7 +15,7 @@ import {
 import Image from "next/image"
 // import BPSLogo from "@/public/bps-logo-w.png"
 import Hexagons from "@/public/hexagons.svg"
-import Triangles from "@/public/triangles.svg"
+import Cropped from "@/public/hexagons-cropped.svg"
 import Epiphany from "@/public/epiphany.png"
 import Workers from "@/public/workers.png"
 import Classroom from "@/public/classroom.jpg"
@@ -140,18 +140,21 @@ export default function Example() {
         <Image
           alt="students excited about computer science"
           src={BigSmiles}
+          priority
           width={700}
           className="absolute left-1/2 transform -translate-x-1/2 sm:translate-x-0 sm:-left-10 -scale-x-100 w-[450px] md:w-[480px] lg:w-[680px] h-auto bottom-0 brightness-125 opacity-80 grayscale bg-transparent"
         />
         <Image
           alt="students excited about computer science"
           src={Epiphany}
+          priority
           width={700}
           className="absolute hidden sm:block right-0 bottom-0 w-[500px] lg:w-[700px] z-0 brightness-125 opacity-90 grayscale bg-transparent"
         />
         <Image
           alt="students excited about computer science"
           src={Workers}
+          priority
           width={550}
           className="absolute hidden xl:block transform left-1/2 -translate-x-1/2 right-0 -bottom-[80px] w-[500px] lg:w-[700px] z-0 brightness-125 opacity-95 grayscale bg-transparent"
         />
@@ -194,9 +197,14 @@ export default function Example() {
       </div>
 
       {/* Feature section */}
-      <main>
+      <main className="relative isolate">
+        {/* <Image
+          src={Cropped}
+          width={200}
+          className="absolute left-0 top-0 inset-0 h-full transform -scale-x-100"
+        /> */}
         {/* About the Program */}
-        <section className="bg-gray-100 py-16 px-4 relative">
+        <section className=" py-16 px-4 relative">
           <div className="max-w-5xl  mx-auto  flex flex-col gap-10 items-center justify-center md:flex-row ">
             <div>
               <h2 className="text-3xl font-bold text-slate-800">What is Exploring STEM Literacy?</h2>
@@ -214,7 +222,7 @@ export default function Example() {
         </section>
 
         {/* Project-Based Learning */}
-        <section className="bg-gray-100 py-16 px-4 relative">
+        <section className=" py-16 px-4 relative">
           <div className="mx-auto max-w-5xl flex flex-col gap-10 items-center justify-center md:flex-row ">
             <Image
               src={RealWorld}
@@ -226,7 +234,7 @@ export default function Example() {
             <div>
               <h2 className="text-3xl font-bold text-slate-800">Hands-On Learning Through Projects</h2>
               <p className="mt-4 text-slate-600 text-lg">
-                In this program, students don't just learn; they create. From fall to spring, students work on real-world projects that integrate math and coding. These projects are designed to give them practical experience in problem-solving and peer collaboration.
+                Students don't just learn; they create. From fall to spring, students work on <strong>real-world projects</strong> that integrate math and coding. These projects are designed to give them practical experience in problem-solving and peer collaboration.
               </p>
             </div>
           </div>
@@ -239,7 +247,7 @@ export default function Example() {
               <div>
                 <h2 className="text-3xl font-bold text-slate-800">Prepare to Lead: Spring Boot Camps</h2>
                 <p className="mt-4 text-slate-600 text-lg">
-                  In the spring, students prepare for an exciting challenge: leading math and coding boot camps for middle-school students. They design learning stations based on the course material and put their facilitation skills to the test, making STEM accessible to younger learners.
+                  In the spring, students prepare for an exciting challenge: <strong>leading math and coding boot camps for middle-school students.</strong> They design learning stations based on the course material and put their facilitation skills to the test, making STEM accessible to younger learners.
                 </p>
               </div>
               <Image
@@ -265,7 +273,7 @@ export default function Example() {
             <div>
               <h2 className="text-3xl font-bold text-slate-800">Pop-Up Boot Camp: Students as Leaders</h2>
               <p className="mt-4 text-slate-600 text-lg">
-                The program concludes with a pop-up math and coding boot camp, organized and implemented by the high school students. This event is a celebration of their learning, where they share their knowledge with younger students, parents, and teachers.
+                The program concludes with a pop-up math and coding boot camp, <strong>organized and implemented by the high school students.</strong> This event is a celebration of their learning, where they share their knowledge with younger students, parents, and teachers.
               </p>
             </div>
           </div>
@@ -273,9 +281,14 @@ export default function Example() {
 
         {/* Get Involved */}
         <section className="bg-slate-900 text-white py-16 text-center relative">
-            <div className="mt-6 space-x-4">
-            &copy; The Young People's Project {new Date().getFullYear()}.
-            </div>
+          <div className="mt-6 space-x-4">
+          &copy; The Young People's Project {new Date().getFullYear()}.
+          </div>
+          <Image
+            alt=""
+            src={Hexagons} // generated with https://www.fffuel.co/gggyrate/
+            className="select-none h-full w-auto md:h-full md:w-full absolute inset-0 object-cover opacity-60"
+          />
         </section>
       </main>
 
