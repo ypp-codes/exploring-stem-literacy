@@ -223,7 +223,7 @@ export default function Example() {
 
         {/* Project-Based Learning */}
         <section className=" py-16 px-4 relative">
-          <div className="mx-auto max-w-5xl flex flex-col gap-10 items-center justify-center md:flex-row ">
+          <div className="mx-auto max-w-5xl flex flex-col-reverse gap-10 items-center justify-center md:flex-row">
             <Image
               src={RealWorld}
               alt="STEM learning"
@@ -262,7 +262,7 @@ export default function Example() {
 
         {/* Culminating Event */}
         <section className="max-w-5xl mx-auto py-16 px-4 relative">
-          <div className="flex flex-col gap-10 items-center justify-center md:flex-row ">
+          <div className="flex flex-col-reverse gap-10 items-center justify-center md:flex-row ">
             <Image
               src={Bootcamp}
               alt="STEM learning"
