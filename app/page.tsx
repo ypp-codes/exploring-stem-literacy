@@ -1,19 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { Bars3Icon, MinusSmallIcon, PlusSmallIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import {
-  ArrowPathIcon,
-  CheckIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from '@heroicons/react/20/solid'
-import Image from "next/image"
-// import BPSLogo from "@/public/bps-logo-w.png"
+
+// IMAGES
 import Hexagons from "@/public/hexagons.svg"
 import Cropped from "@/public/hexagons-cropped.svg"
 import Epiphany from "@/public/epiphany.png"
@@ -24,13 +13,16 @@ import Robot from "@/public/robot.jpg"
 import Bootcamp from "@/public/bootcamp.jpg"
 import BigSmiles from "@/public/bigsmiles_transparent.png"
 import Laptops from "@/public/laptops.jpg"
+
+// COMPONENTS
+import Image from "next/image"
 import { motion } from "framer-motion"
 import LogoText from '@/components/LogoText'
-import FilterImage from '@/components/FilterImage'
+import ScrollyImage from '@/components/ScrollyImage'
 
 const navigation = [
   { name: 'About', href: '#' },
-  // { name: 'spacer', href: '' },
+  { name: 'CS For All', href: '#' },
   { name: 'Python', href: '#' },
   { name: 'Rust', href: '#' },
   { name: 'Data Science', href: '#' },
@@ -41,124 +33,56 @@ function classNames(...classes: string[]): string {
 }
 
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const bannerElement = document.getElementById("hero");
-    const bannerHeight = bannerElement ? bannerElement.offsetHeight : 0;
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > (bannerHeight - 130));
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="bg-white">
-      {/* Header */}
-      <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-slate-950 to-transparent">
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
-            <LogoText />
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item, index) => {
-              if (item.name !== "spacer") return (
-                <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
-                  {item.name}
-                </a>
-              )
-              return <span className="select-none text-slate-400" key={`${item.name} + ${index}`}>|</span>
-            })}
-          </div>
-        </nav>
-        <Dialog
-          open={mobileMenuOpen}
-          onClose={setMobileMenuOpen}
-          transition
-          className="lg:hidden"
-        >
-          <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-900 bg-opacity-80 backdrop-blur-md px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <LogoText />
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-slate-200"
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-300/70">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => {
-                    if (item.name !== "spacer")
-                      return (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-200 hover:bg-slate-700"
-                        >
-                          {item.name}
-                        </a>
-                      )
-                  })}
-                </div>
-              </div>
-            </div>
-          </DialogPanel>
-        </Dialog>
-        <motion.div
-          className="absolute inset-x-0 top-0 -z-10 bg-gradient-to-b from-slate-950 to-slate-900 h-full select-none"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isScrolled ? 1 : 0 }}
-          transition={{ ease: "easeInOut", duration: 0.2 }}>
-          <Image
-            alt=""
-            src={Hexagons} // generated with https://www.fffuel.co/gggyrate/
-            className="select-none h-full w-auto md:h-full md:w-full absolute inset-0 object-cover opacity-50"
-          />
-        </motion.div>
-      </header>
-
       {/* Hero section */}
       <div id="hero" className="relative isolate select-none overflow-hidden h-[750px] sm:h-auto bg-slate-900 pb-16 pt-14 sm:pb-20">
-        <Image
-          alt="students excited about computer science"
-          src={BigSmiles}
-          priority
-          width={700}
-          className="absolute left-1/2 transform -translate-x-1/2 sm:translate-x-0 sm:-left-10 -scale-x-100 w-[450px] md:w-[480px] lg:w-[680px] h-auto bottom-0 brightness-125 opacity-80 grayscale bg-transparent"
-        />
-        <Image
-          alt="students excited about computer science"
-          src={Epiphany}
-          priority
-          width={700}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 0.8, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="absolute left-1/2 transform !-translate-x-1/2 sm:!translate-x-0 sm:-left-10 w-[450px] md:w-[480px] lg:w-[680px] h-auto bottom-0 brightness-125 opacity-90 grayscale bg-transparent"
+        >
+          <Image
+            alt="students excited about computer science"
+            src={BigSmiles}
+            priority
+            width={700}
+            className='w-full h-auto scale-x-100 sm:-scale-x-100'
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 0.9, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           className="absolute hidden sm:block right-0 bottom-0 w-[500px] lg:w-[700px] z-0 brightness-125 opacity-90 grayscale bg-transparent"
-        />
-        <Image
-          alt="students excited about computer science"
-          src={Workers}
-          priority
-          width={550}
-          className="absolute hidden xl:block transform left-1/2 -translate-x-1/2 right-0 -bottom-[80px] w-[500px] lg:w-[700px] z-0 brightness-125 opacity-95 grayscale bg-transparent"
-        />
+        >
+          <Image
+            alt="students excited about computer science"
+            src={Epiphany}
+            priority
+            width={700}
+            className='w-full h-auto'
+          />
+        </motion.div>
+
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 0.95, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+          className="absolute hidden xl:block left-1/4 transform translate-x-1/2 -bottom-[80px] w-[500px] lg:w-[700px] z-0 brightness-125 opacity-95 grayscale bg-transparent"
+        >
+          <Image
+            alt="students excited about computer science"
+            src={Workers}
+            priority
+            width={550}
+            className='w-full h-auto'
+          />
+        </motion.div>
+
         <div className="w-full absolute inset-0 -z-10 object-cover">
           <motion.div
             className="h-full w-auto md:h-auto md:w-full absolute inset-0 object-cover"
@@ -213,11 +137,13 @@ export default function Example() {
                 Exploring STEM Literacy is a three-year elective program designed for 9th to 11th graders. Students learn the fundamentals of <strong>coding</strong>, <strong>computational thinking</strong>, and <strong>mathematical reasoning</strong>, applying these skills to <strong>real-world problems.</strong> This course combines classroom learning with project-based workshops, culminating in a student-led boot camp.
               </p>
             </div>
-            <Image
+            <div className='flex-grow' />
+            <ScrollyImage
               src={Classroom}
               alt="STEM learning"
               width={380}
-              className="rotate-3 right-0 rounded-xl filter brightness-125"
+              className="rotate-3 rounded-xl"
+              filters="brightness-125"
             />
           </div>
         </section>
@@ -225,11 +151,13 @@ export default function Example() {
         {/* Project-Based Learning */}
         <section className=" py-16 px-4 relative">
           <div className="mx-auto max-w-5xl flex flex-col-reverse gap-10 items-center justify-center md:flex-row">
-            <Image
-              src={RealWorld}
+            <ScrollyImage
+              src={Robot}
               alt="STEM learning"
               width={380}
-              className="-rotate-3 right-0 rounded-xl filter contrast-125 brightness-90"
+              className="-rotate-3 rounded-xl"
+              filters="brightness-125"
+
             />
             <div className='flex-grow' />
             <div>
@@ -251,11 +179,13 @@ export default function Example() {
                   In the spring, students prepare for an exciting challenge: <strong>leading math and coding boot camps for middle-school students.</strong> They design learning stations based on the course material and put their facilitation skills to the test, making STEM accessible to younger learners.
                 </p>
               </div>
-              <Image
-                src={Robot}
+              <div className='flex-grow' />
+              <ScrollyImage
+                src={RealWorld}
                 alt="STEM learning"
                 width={380}
-                className="rotate-3 right-0 rounded-xl filter brightness-125"
+                className="rotate-3 rounded-xl"
+                filters="contrast-125 brightness-90"
               />
             </div>
           </div>
@@ -264,11 +194,11 @@ export default function Example() {
         {/* Culminating Event */}
         <section className="max-w-5xl mx-auto py-16 px-4 relative">
           <div className="flex flex-col-reverse gap-10 items-center justify-center md:flex-row ">
-            <Image
+            <ScrollyImage
               src={Bootcamp}
               alt="STEM learning"
               width={380}
-              className="-rotate-3 right-0 rounded-xl"
+              className="-rotate-3 rounded-xl"
             />
             <div className='flex-grow' />
             <div>
@@ -279,20 +209,7 @@ export default function Example() {
             </div>
           </div>
         </section>
-
-        {/* Get Involved */}
-        <section className="bg-slate-900 text-white py-16 text-center relative">
-          <div className="mt-6 space-x-4">
-            &copy; The Young People's Project {new Date().getFullYear()}.
-          </div>
-          <Image
-            alt=""
-            src={Hexagons} // generated with https://www.fffuel.co/gggyrate/
-            className="select-none h-full w-auto md:h-full md:w-full absolute inset-0 object-cover opacity-60"
-          />
-        </section>
       </main>
-
     </div>
   )
 }

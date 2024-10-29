@@ -3,6 +3,7 @@ import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import YPPLogo from "@/public/YPP-Logo-white.webp";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const LogoText = () => {
 	const { scrollY } = useScroll();
@@ -21,7 +22,7 @@ const LogoText = () => {
 	// }, [scrollY]);
 
 	return (
-		<div className="flex space-x-5 w-fit items-center font-display text-xl font-semibold">
+		<Link href="/" className="flex space-x-5 w-fit items-center font-display text-xl font-semibold">
 				<Image
 					alt="YPP logo"
 					src={YPPLogo}
@@ -29,7 +30,7 @@ const LogoText = () => {
 					className=""
 				/>
 				<div>Exploring STEM Literacy</div>
-		</div>
+		</Link>
 	);
 };
 

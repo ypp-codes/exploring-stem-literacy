@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Source_Sans_3 } from "next/font/google";
 import localFont from "next/font/local"
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const SpaceGroteskFont = Space_Grotesk({
   weight: ["400", "600"],
@@ -32,9 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${SpaceGroteskFont.variable} ${SourceSans.variable} ${MonaspaceArgon_Regular.variable} antialiased`}
+        className={`${SpaceGroteskFont.variable} ${SourceSans.variable} ${MonaspaceArgon_Regular.variable} antialiased min-h-4xl`}
       >
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
