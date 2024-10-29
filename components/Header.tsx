@@ -1,27 +1,14 @@
 "use client"
 
 import LogoText from "./LogoText"
-import { React, useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Hexagons from "@/public/hexagons.svg"
 import Image from "next/image"
-import { motion } from "framer-motion"
-import { Bars3Icon, MinusSmallIcon, PlusSmallIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import {
-	ArrowPathIcon,
-	CheckIcon,
-	CloudArrowUpIcon,
-	Cog6ToothIcon,
-	FingerPrintIcon,
-	LockClosedIcon,
-	ServerIcon,
-} from '@heroicons/react/20/solid'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import {
 	Dialog,
 	DialogPanel,
-	Disclosure,
-	DisclosureButton,
-	DisclosurePanel
 } from '@headlessui/react'
 
 import { usePathname } from 'next/navigation'
@@ -34,7 +21,7 @@ const navigation = [
 	{ name: 'Data Science', href: '/courses/data-science' },
 ]
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 	const isHomePage = usePathname() === '/';

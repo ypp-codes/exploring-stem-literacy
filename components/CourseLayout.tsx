@@ -1,11 +1,15 @@
 import CourseSidebar from "@/components/CourseSidebar";
 import LoadingList from "@/components/LoadingList";
-import { React, Suspense } from "react"
+import React, { Suspense } from "react"
 
 export interface PathData { slug: string, title: string }
 
+interface CourseLayoutProps {
+	children: React.ReactNode;
+	course: "python" | "rust" | "data-science" | "cs-for-all";
+}
 
-const CourseLayout: React.FC = async ({ children, course }: Readonly<{ children: React.ReactNode, course: "python" | "rust" | "data-science" }>) => {
+const CourseLayout: React.FC<CourseLayoutProps> = async ({ children, course }: CourseLayoutProps) => {
 	const response = await fetch(`https://api.github.com/repos/ypp-codes/exploring-stem-literacy/contents/courses/${course}`);
 	const files = await response.json();
 

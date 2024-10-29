@@ -1,10 +1,5 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-
 // IMAGES
 import Hexagons from "@/public/hexagons.svg"
-import Cropped from "@/public/hexagons-cropped.svg"
 import Epiphany from "@/public/epiphany.png"
 import Workers from "@/public/workers.png"
 import Classroom from "@/public/classroom.jpg"
@@ -12,25 +7,11 @@ import RealWorld from "@/public/realworld.jpg"
 import Robot from "@/public/robot.jpg"
 import Bootcamp from "@/public/bootcamp.jpg"
 import BigSmiles from "@/public/bigsmiles_transparent.png"
-import Laptops from "@/public/laptops.jpg"
 
 // COMPONENTS
 import Image from "next/image"
 import { motion } from "framer-motion"
-import LogoText from '@/components/LogoText'
 import ScrollyImage from '@/components/ScrollyImage'
-
-const navigation = [
-  { name: 'About', href: '#' },
-  { name: 'CS For All', href: '#' },
-  { name: 'Python', href: '#' },
-  { name: 'Rust', href: '#' },
-  { name: 'Data Science', href: '#' },
-]
-
-function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Example() {
   return (

@@ -7,7 +7,7 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> =
-	(props: FooterProps) => {
+	() => {
 		return <footer className="text-white py-12 text-center relative overflow-hidden">
 			<div className="mt-6 z-10 space-x-4">
 				&copy; The Young People's Project {new Date().getFullYear()}.

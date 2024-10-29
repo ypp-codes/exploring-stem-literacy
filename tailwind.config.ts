@@ -20,6 +20,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [import('@tailwindcss/typography')],
 };
 export default config;
