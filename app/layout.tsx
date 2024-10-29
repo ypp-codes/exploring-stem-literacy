@@ -24,6 +24,18 @@ const MonaspaceArgon_Regular = localFont({
 export const metadata: Metadata = {
   title: "Exploring STEM Literacy",
   description: "Teaching high schoolers STEM skills and empowers them to teach their peers. A project offered by The Young People's Project.",
+  openGraph: {
+    title: "Exploring STEM Literacy",
+    description: "Teaching high schoolers STEM skills and empowers them to teach their peers.",
+    images: "/preview.jpg", // Path to image in `public`
+    url: "https://cs.typp.org",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exploring STEM Literacy",
+    description: "Teaching high schoolers STEM skills and empowers them to teach their peers.",
+    images: "/preview.jpg", // Path to image in `public`
+  },
 };
 
 export default function RootLayout({
@@ -36,9 +48,9 @@ export default function RootLayout({
       <body
         className={`${SpaceGroteskFont.variable} ${SourceSans.variable} ${MonaspaceArgon_Regular.variable} antialiased min-h-4xl`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
