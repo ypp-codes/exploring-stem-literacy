@@ -1,3 +1,4 @@
+"use client"
 // IMAGES
 import Hexagons from "@/public/hexagons.svg"
 import Epiphany from "@/public/epiphany.png"
