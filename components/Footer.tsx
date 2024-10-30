@@ -8,6 +8,7 @@ interface FooterProps {
   children?: React.ReactNode;
 }
 
+
 const Footer: React.FC<FooterProps> = (props: FooterProps) => {
   return (
     <footer

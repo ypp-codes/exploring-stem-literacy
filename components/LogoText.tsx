@@ -1,15 +1,15 @@
 "use client";
-import { motion, useScroll } from 'framer-motion';
-import { useEffect, useState } from 'react';
+// import { motion, useScroll } from 'framer-motion';
+// import { useEffect, useState } from 'react';
 import YPPLogo from "@/public/YPP-Logo-white.webp";
 import Image from 'next/image';
 import Link from 'next/link';
 
 const LogoText = () => {
-	const { scrollY } = useScroll();
+	// const { scrollY } = useScroll();
 	// const [scrolled, setScrolled] = useState(false);
-	const [hasAnimated, setHasAnimated] = useState(false);
-	const initDelay = 1.5
+	// const [hasAnimated, setHasAnimated] = useState(false);
+	// const initDelay = 1.5
 
 	// useEffect(() => {
 	// 	return scrollY.onChange((latest) => {

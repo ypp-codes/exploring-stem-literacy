@@ -1,27 +1,28 @@
 "use client"
-import { PathData } from "@/app/courses/python/layout"
+import { PathData } from "./CourseLayout"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import React from "react"
 import clsx from "clsx"
 
 interface CourseSidebarProps {
-	children?: React.ReactNode
-	paths?: PathData[]
-	course: "python" | "rust" | "data-science"
-	className?: string
+	children?: React.ReactNode;
+	paths?: PathData[];
+	course: "python" | "rust" | "data-science" | "cs-for-all";
+	className?: string;
 }
 
 const CourseSidebar: React.FC<CourseSidebarProps> =
 	({ paths, course, className }: CourseSidebarProps) => {
 		const pathname = usePathname()
+
 		return <>
 			<nav className={clsx('text-base lg:text-sm', className)}>
 				<ul
 					role="list"
 					className="mt-2 space-y-2 border-l-2 border-slate-100 lg:mt-4 lg:space-y-4 lg:border-slate-200"
 				>
-					{paths.map((path) => (
+					{paths?.map((path) => (
 						<li key={path.slug} className="relative capitalize">
 							<Link
 								href={`/courses/${course}/${path.slug}`}
