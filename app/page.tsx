@@ -18,7 +18,10 @@ export default function Example() {
   return (
     <div className="bg-white">
       {/* Hero section */}
-      <div id="hero" className="relative isolate select-none overflow-hidden h-[750px] sm:h-auto bg-slate-900 pb-16 pt-14 sm:pb-20">
+      <div
+        id="hero"
+        className="relative isolate select-none overflow-hidden h-[750px] sm:h-auto bg-slate-900 pb-16 pt-14 sm:pb-20"
+      >
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 0.8, scale: 1 }}
@@ -30,7 +33,7 @@ export default function Example() {
             src={BigSmiles}
             priority
             width={700}
-            className='w-full h-auto scale-x-100 sm:-scale-x-100'
+            className="w-full h-auto scale-x-100 sm:-scale-x-100"
           />
         </motion.div>
 
@@ -45,10 +48,9 @@ export default function Example() {
             src={Epiphany}
             priority
             width={700}
-            className='w-full h-auto'
+            className="w-full h-auto"
           />
         </motion.div>
-
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -61,7 +63,7 @@ export default function Example() {
             src={Workers}
             priority
             width={550}
-            className='w-full h-auto'
+            className="w-full h-auto"
           />
         </motion.div>
 
@@ -70,7 +72,12 @@ export default function Example() {
             className="h-full w-auto md:h-auto md:w-full absolute inset-0 object-cover"
             initial={{ opacity: 0.55 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.3, repeatType: "mirror", ease: "easeInOut", repeat: Infinity }}
+            transition={{
+              duration: 1.3,
+              repeatType: "mirror",
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
           >
             <Image
               alt=""
@@ -78,24 +85,34 @@ export default function Example() {
               className="h-full w-auto md:h-auto md:w-full absolute inset-0 object-cover"
             />
           </motion.div>
-          <div className="w-full h-1/2 absolute top-1/2 bg-gradient-to-b from-transparent to-slate-900">
-          </div>
+          <div className="w-full h-1/2 absolute top-1/2 bg-gradient-to-b from-transparent to-slate-900"></div>
         </div>
-
 
         {/* Hero Text Section */}
         <div className="mx-auto max-w-7xl px-6 lg:px-8 select-text">
-          <div className="mx-auto max-w-2xl py-32 sm:pt-44 sm:pb-40 lg:pt-48 lg:pb-60">
+          <div className="mx-auto max-w-2xl py-20 sm:pt-44 sm:pb-40 lg:pt-44 lg:pb-60">
             <div className="text-center">
               <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 Turning students into leaders, shaping the future of STEM
               </h1>
               <p className="mt-6 text-lg md:text-xl leading-8">
-                Exploring STEM Literacy trains high schoolers with coding and math skills, and empowers them to teach these skills to their peers.
+                Exploring STEM Literacy is a series of integrated Math
+                and Computer Science modules designed to equip high
+                school students with essential math and coding skills,
+                empowering them to teach these skills to their younger peers.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a href="#" className="text-sm font-semibold leading-6 text-white">
+                {/* <a
+                  href="#"
+                  className="z-20 text-sm font-semibold leading-6 text-white"
+                >
                   Learn more <span aria-hidden="true">→</span>
+                </a> */}
+                <a
+                  href="#about"
+                  className="z-20 text-sm font-semibold leading-6 text-white"
+                >
+                  See how we do it <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
@@ -111,15 +128,24 @@ export default function Example() {
           className="absolute left-0 top-0 inset-0 h-full transform -scale-x-100"
         /> */}
         {/* About the Program */}
-        <section className=" py-16 px-4 relative">
-          <div className="max-w-5xl  mx-auto  flex flex-col gap-10 items-center justify-center md:flex-row ">
+        <section id="about" className="py-5 px-4 relative">
+          <div className="max-w-5xl  mx-auto pt-5 flex flex-col gap-10 items-center justify-center md:flex-row ">
             <div>
-              <h2 className="text-3xl font-bold text-slate-800">What is Exploring STEM Literacy?</h2>
+              <h2 className="text-3xl font-bold text-slate-800">
+                What is Exploring STEM Literacy?
+              </h2>
               <p className="mt-4 text-slate-600 text-lg max-w-2xl">
-                Exploring STEM Literacy is a three-year elective program designed for 9th to 11th graders. Students learn the fundamentals of <strong>coding</strong>, <strong>computational thinking</strong>, and <strong>mathematical reasoning</strong>, applying these skills to <strong>real-world problems.</strong> This course combines classroom learning with project-based workshops, culminating in a student-led boot camp.
+                Exploring STEM Literacy is a three-year elective program
+                designed for 9th to 11th graders. Students learn the
+                fundamentals of <strong>coding</strong>,{" "}
+                <strong>computational thinking</strong>, and{" "}
+                <strong>mathematical reasoning</strong>, applying these skills
+                to <strong>real-world problems.</strong> This course combines
+                classroom learning with project-based workshops, culminating in
+                a student-led boot camp.
               </p>
             </div>
-            <div className='flex-grow' />
+            <div className="flex-grow" />
             <ScrollyImage
               src={Classroom}
               alt="STEM learning"
@@ -139,13 +165,18 @@ export default function Example() {
               width={380}
               className="-rotate-3 rounded-xl"
               filters="brightness-125"
-
             />
-            <div className='flex-grow' />
+            <div className="flex-grow" />
             <div>
-              <h2 className="text-3xl font-bold text-slate-800">Hands-On Learning Through Projects</h2>
+              <h2 className="text-3xl font-bold text-slate-800">
+                Hands-On Learning Through Projects
+              </h2>
               <p className="mt-4 text-slate-600 text-lg">
-                Students don't just learn; they create. From fall to spring, students work on <strong>real-world projects</strong> that integrate math and coding. These projects are designed to give them practical experience in problem-solving and peer collaboration.
+                Students don't just learn; they create. From fall to spring,
+                students work on <strong>real-world projects</strong> that
+                integrate math and coding. These projects are designed to give
+                them practical experience in problem-solving and peer
+                collaboration.
               </p>
             </div>
           </div>
@@ -156,12 +187,21 @@ export default function Example() {
           <div className="max-w-5xl mx-auto px-4">
             <div className="flex flex-col gap-10 items-center justify-center md:flex-row ">
               <div>
-                <h2 className="text-3xl font-bold text-slate-800">Prepare to Lead: Spring Boot Camps</h2>
+                <h2 className="text-3xl font-bold text-slate-800">
+                  Prepare to Lead: Spring Boot Camps
+                </h2>
                 <p className="mt-4 text-slate-600 text-lg">
-                  In the spring, students prepare for an exciting challenge: <strong>leading math and coding boot camps for middle-school students.</strong> They design learning stations based on the course material and put their facilitation skills to the test, making STEM accessible to younger learners.
+                  In the spring, students prepare for an exciting challenge:{" "}
+                  <strong>
+                    leading math and coding boot camps for middle-school
+                    students.
+                  </strong>{" "}
+                  They design learning stations based on the course material and
+                  put their facilitation skills to the test, making STEM
+                  accessible to younger learners.
                 </p>
               </div>
-              <div className='flex-grow' />
+              <div className="flex-grow" />
               <ScrollyImage
                 src={RealWorld}
                 alt="STEM learning"
@@ -182,16 +222,23 @@ export default function Example() {
               width={380}
               className="-rotate-3 rounded-xl"
             />
-            <div className='flex-grow' />
+            <div className="flex-grow" />
             <div>
-              <h2 className="text-3xl font-bold text-slate-800">Pop-Up Boot Camp: Students as Leaders</h2>
+              <h2 className="text-3xl font-bold text-slate-800">
+                Pop-Up Boot Camp: Students as Leaders
+              </h2>
               <p className="mt-4 text-slate-600 text-lg">
-                The program concludes with a pop-up math and coding boot camp, <strong>organized and implemented by the high school students.</strong> This event is a celebration of their learning, where they share their knowledge with younger students, parents, and teachers.
+                The program concludes with a pop-up math and coding boot camp,{" "}
+                <strong>
+                  organized and implemented by the high school students.
+                </strong>{" "}
+                This event is a celebration of their learning, where they share
+                their knowledge with younger students, parents, and teachers.
               </p>
             </div>
           </div>
         </section>
       </main>
     </div>
-  )
+  );
 }
