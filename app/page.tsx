@@ -96,20 +96,20 @@ export default function Example() {
                 Turning students into leaders, shaping the future of STEM
               </h1>
               <p className="mt-6 text-lg md:text-xl leading-8">
-              Exploring STEM Literacy is a series of integrated Math 
-              and Computer Science modules designed to equip high 
-              school students with essential math and coding skills, 
-              empowering them to teach these skills to their younger peers.
+                Exploring STEM Literacy is a series of integrated Math
+                and Computer Science modules designed to equip high
+                school students with essential math and coding skills,
+                empowering them to teach these skills to their younger peers.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
+                {/* <a
                   href="#"
                   className="z-20 text-sm font-semibold leading-6 text-white"
                 >
                   Learn more <span aria-hidden="true">→</span>
-                </a>
+                </a> */}
                 <a
-                  href="#footer"
+                  href="#about"
                   className="z-20 text-sm font-semibold leading-6 text-white"
                 >
                   See how we do it <span aria-hidden="true">→</span>
@@ -128,7 +128,7 @@ export default function Example() {
           className="absolute left-0 top-0 inset-0 h-full transform -scale-x-100"
         /> */}
         {/* About the Program */}
-        <section className="py-5 px-4 relative">
+        <section id="about" className="py-5 px-4 relative">
           <div className="max-w-5xl  mx-auto pt-5 flex flex-col gap-10 items-center justify-center md:flex-row ">
             <div>
               <h2 className="text-3xl font-bold text-slate-800">
@@ -237,7 +237,6 @@ export default function Example() {
               </p>
             </div>
           </div>
-          
         </section>
       </main>
     </div>
