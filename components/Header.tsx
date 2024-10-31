@@ -14,18 +14,14 @@ import {
 import { usePathname } from 'next/navigation'
 
 const navigation = [
-	{ name: 'About', href: '/' },
-	{ name: 'CS For All', href: '/courses/cs-for-all' },
-	{ name: 'Python', href: '/courses/python' },
-	{ name: 'Rust', href: '/courses/rust' },
-	{ name: 'Data Science', href: '/courses/data-science' },
+	{ name: 'Home', href: '/' },
+	{ name: 'Courses', href: '/courses/' },
 ]
 
 const Header: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 	const isHomePage = usePathname() === '/';
-
 
 	return <>
 		<header
