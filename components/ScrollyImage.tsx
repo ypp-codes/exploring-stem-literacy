@@ -36,7 +36,7 @@ const ScrollyImage: React.FC<ScrollyImageProps> = ({
 			whileInView={whileInView}
 			transition={transition}
 			viewport={viewport}
-			className={`relative min-w-[380px] ${notRotation}`}
+			className={`relative ${notRotation}`}
 		>
 			<Image
 				src={src}

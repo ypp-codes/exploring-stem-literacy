@@ -1,3 +1,4 @@
+"use client"
 import clsx from "clsx"
 
 export default function MdxLayout({ children, className }: { children: React.ReactNode, className?: string }) {

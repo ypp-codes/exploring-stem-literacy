@@ -28,7 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/courses/python/page.mdx",
-    "app/courses/page.mdx"
+    "app/courses/page.tsx"
   ],
   "exclude": ["node_modules"]
 }
