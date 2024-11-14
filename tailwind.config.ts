@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import typography from '@tailwindcss/typography';
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -13,11 +13,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         accent: "#00A973",
+        "accent-hover": "#018A5E",
         secondary: "#05714F",
       },
       fontFamily: {
         display: ["var(--font-space-grotesk)", "sans-serif"],
-        logo: ["var(--font-argon)", "monospace"]
+        logo: ["var(--font-argon)", "monospace"],
       },
     },
   },

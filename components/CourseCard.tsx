@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface CourseCardProps {
   children?: React.ReactNode;
@@ -20,12 +21,22 @@ const CourseCard: React.FC<CourseCardProps> = ({
     <>
       <div
         onClick={() => setOpen()}
-        className={`text-center hover:cursor-pointer border border-slate-50 hover:border hover:border-slate-200 bg-slate-50 rounded-lg py-2 transition ${open ?? "bg-slate-200"}`}
+        className={`text-center relative hover:cursor-pointer border  hover:border  rounded-lg py-2 transition-all duration-[0.35s] ${open ? "bg-slate-800 border-secondary/50 *:text-slate-100" : "hover:border-slate-200 bg-slate-50 border-slate-50"}`}
       >
         <h2 className="m-0 text-lg flex items-center justify-center gap-2 px-2">
           {Icon && <Icon className="text-2xl" />}
           {name}
         </h2>
+        {/* { */}
+        {/*   open &&  */}
+        {/* } */}
+        {/* {open && ( */}
+        {/*   <motion.div */}
+        {/*     className="absolute w-full h-full -bottom-0 left-0 z-10 border-accent border-[1.5px] rounded-lg" */}
+        {/*     layoutId="course-card" */}
+        {/*     transition={{ duration: 0.25, ease: "easeInOut" }} */}
+        {/*   ></motion.div> */}
+        {/* )} */}
       </div>
     </>
   );

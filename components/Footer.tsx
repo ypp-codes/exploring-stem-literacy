@@ -4,21 +4,19 @@ import Image from "next/image";
 import Hexagons from "@/public/hexagons.svg";
 import { usePathname } from "next/navigation";
 
-
 interface FooterProps {
   children?: React.ReactNode;
 }
 
-
 const Footer: React.FC<FooterProps> = (props: FooterProps) => {
-  const isHomePage = usePathname() === "/"
+  const showFooter = ["/", "/courses"].includes(usePathname());
   return (
     <footer
       id="footer"
       className="text-white py-12 text-center relative overflow-hidden"
     >
-      {
-        isHomePage && <div>
+      {showFooter && (
+        <div>
           {" "}
           {/* Video Section */}
           <div className="flex items-center justify-center pb-10 ">
@@ -57,7 +55,7 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
             </button>
           </div>
         </div>
-      }
+      )}
       <div className="mt-10 z-10 space-x-4">
         &copy; The Young People's Project {new Date().getFullYear()}.
       </div>

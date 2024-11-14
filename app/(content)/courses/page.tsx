@@ -7,6 +7,8 @@ import { FaCode } from "react-icons/fa6";
 import { useState } from "react";
 import Robot from "@/public/robot.jpg";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const PythonSection = () => (
   <>
@@ -192,10 +194,52 @@ const CoursesPage = () => {
 
       <section className="py-8 relative">
         <div className="max-w-4xl border rounded-xl border-slate-200 p-4 mb-8">
-          {pyOpen && <PythonSection />}
-          {rsOpen && <RustSection />}
-          {dsOpen && <DSSection />}
-          {csOpen && <CSSection />}
+          <AnimatePresence mode="wait">
+            {pyOpen && (
+              <motion.div
+                key="python"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <PythonSection />
+              </motion.div>
+            )}
+            {rsOpen && (
+              <motion.div
+                key="rust"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <RustSection />
+              </motion.div>
+            )}
+            {dsOpen && (
+              <motion.div
+                key="datascience"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <DSSection />
+              </motion.div>
+            )}
+            {csOpen && (
+              <motion.div
+                key="computerscience"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <CSSection />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         <div className="mx-auto max-w-5xl flex flex-col gap-10 items-center justify-center md:flex-row">
           <div>
@@ -224,7 +268,8 @@ const CoursesPage = () => {
             I want to look at the content myself!
           </h3>
           <p className="mt-4 text-slate-600">
-            All of the content for the courses are available for teachers.
+            All of the content for the courses are available for teachers.{" "}
+            <Link href="/login">Log in</Link> to view.
           </p>
         </div>
       </section>
