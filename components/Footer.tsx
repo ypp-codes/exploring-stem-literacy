@@ -4,21 +4,19 @@ import Image from "next/image";
 import Hexagons from "@/public/hexagons.svg";
 import { usePathname } from "next/navigation";
 
-
 interface FooterProps {
   children?: React.ReactNode;
 }
 
-
 const Footer: React.FC<FooterProps> = (props: FooterProps) => {
-  const isHomePage = usePathname() === "/"
+  const showFooter = ["/", "/courses"].includes(usePathname());
   return (
     <footer
       id="footer"
       className="text-white py-12 text-center relative overflow-hidden"
     >
-      {
-        isHomePage && <div>
+      {showFooter && (
+        <div>
           {" "}
           {/* Video Section */}
           <div className="flex items-center justify-center pb-10 ">
@@ -26,7 +24,7 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
               Check out the work in action:
             </h2>
           </div>
-          <div className="max-w-5xl mx-auto flex flex-col gap-3 items-center justify-center md:flex-row">
+          <div className="max-w-4xl mx-auto px-6 flex flex-col gap-3 items-center justify-center md:flex-row">
             <div className="flex-1 w-full">
               <iframe
                 className="rounded-xl w-full h-auto aspect-video grayscale hover:grayscale-0 transition duration-300"
@@ -57,7 +55,7 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
             </button>
           </div>
         </div>
-      }
+      )}
       <div className="mt-10 z-10 space-x-4">
         &copy; The Young People's Project {new Date().getFullYear()}.
       </div>

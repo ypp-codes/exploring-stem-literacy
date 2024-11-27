@@ -20,7 +20,7 @@ export default function Example() {
       {/* Hero section */}
       <div
         id="hero"
-        className="relative isolate select-none overflow-hidden h-[750px] sm:h-auto bg-slate-900 pb-16 pt-14 sm:pb-20"
+        className="relative isolate select-none overflow-hidden h-[850px] sm:h-auto bg-slate-900 pb-16 pt-14 sm:pb-20"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -129,7 +129,7 @@ export default function Example() {
         /> */}
         {/* About the Program */}
         <section id="about" className="py-5 px-4 relative">
-          <div className="max-w-5xl  mx-auto pt-5 flex flex-col gap-10 items-center justify-center md:flex-row ">
+          <div className="max-w-5xl mx-auto pt-5 flex flex-col gap-10 items-center justify-center md:flex-row ">
             <div>
               <h2 className="text-3xl font-bold text-slate-800">
                 What is Exploring STEM Literacy?
@@ -150,7 +150,7 @@ export default function Example() {
               src={Classroom}
               alt="STEM learning"
               width={380}
-              className="rotate-3 rounded-xl"
+              className="rotate-3 rounded-xl min-w-[380px]"
               filters="brightness-125"
             />
           </div>
@@ -163,7 +163,7 @@ export default function Example() {
               src={Robot}
               alt="STEM learning"
               width={380}
-              className="-rotate-3 rounded-xl"
+              className="-rotate-3 rounded-xl min-w-[380px]"
               filters="brightness-125"
             />
             <div className="flex-grow" />
@@ -206,7 +206,7 @@ export default function Example() {
                 src={RealWorld}
                 alt="STEM learning"
                 width={380}
-                className="rotate-3 rounded-xl"
+                className="rotate-3 rounded-xl min-w-[380px]"
                 filters="contrast-125 brightness-90"
               />
             </div>
@@ -220,7 +220,7 @@ export default function Example() {
               src={Bootcamp}
               alt="STEM learning"
               width={380}
-              className="-rotate-3 rounded-xl"
+              className="-rotate-3 rounded-xl min-w-[380px]"
             />
             <div className="flex-grow" />
             <div>
