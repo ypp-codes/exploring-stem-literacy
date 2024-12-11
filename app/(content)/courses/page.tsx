@@ -24,9 +24,9 @@ const PythonSection = () => (
     </p>
     <h3>How is the course structured?</h3>
     <p>
-      The course starts with basic concepts like variables, loops, and
-      functions, gradually building up to more complex topics such as data
-      handling and creating small projects. Each session also includes
+      The course starts with foundational concepts like variables, loops, conditionals,
+      and functions, gradually building up to more complex topics such as data
+      handling and applications that solve real world problems. Many of the experiences include
       peer-teaching exercises, where students work in pairs or small groups to
       reinforce their understanding by explaining concepts to one another.
     </p>
@@ -86,28 +86,23 @@ const CSSection = () => (
     </h2>
     <h3>What is CS For All?</h3>
     <p>
-      CS For All is a research-practice partnership that aims to increase the
-      number of high school computer science teachers through a professional
+      In 2020, YPP was awarded a National Science Foundation grant to develop a research-practice partnership 
+      that aimed to increase the number of high school computer science teachers through a professional
       development model that uses culturally relevant pedagogy and integration
-      into mathematics classrooms. The goal of this project is to provide
-      professional development for teachers that use a classroom model of
-      instruction developed by the Young People’s Project, the Algebra Project,
-      and Bootstrap that integrates CS into existing 9th grade Algebra 1
-      classrooms.
+      into mathematics classrooms. Since then, we have augmented the Bootstrap:Algebra curriculum that math teacher 
+      can utilize in their classrooms to deepen student understanding of functions. 
     </p>
     <h3>Why Bootstrap:Algebra?</h3>
     <p>
-      In the Bootstrap:Algebra curriculum, students program a videogame of their
-      own design, learning core algebra concepts like order of operations;
-      function composition; function definition; inequalities; piecewise
-      functions; and the distance formula. This is done amidst important
-      computer science concepts such as reactive programming, datatypes,
-      testing, and code reviews.{" "}
-      <strong>
-        Our explicit connection to algebra is unique among programming tools for
-        beginners,{" "}
-      </strong>
-      and we’ve published results showing real impact in algebra.
+    We like the Bootstrap: Algebra curriculum because students deeply engage with 
+    the fundamental mathematical concept of functions. By creating video games, 
+    designing shapes, and learning through trial and error, they master essential 
+    algebraic principles, including order of operations, function composition, 
+    function definition, inequalities, piecewise functions, and the distance formula. 
+    Alongside these mathematical skills, students also explore key computer 
+    science concepts like reactive programming, data types, testing, and code 
+    reviews, making the learning experience both interdisciplinary and practical.{" "}
+      
     </p>
   </>
 );
@@ -154,7 +149,7 @@ const CoursesPage = () => {
     <div className="prose max-w-3xl mx-auto px-3 py-8">
       <h1>Courses</h1>
       <p>
-        The Exploring STEM Literacy program covers a variety of content areas,
+        The Exploring STEM Literacy experiences cover a variety of content areas,
         equipping students with skills from various parts of the STEM world.
       </p>
       <p>
@@ -244,13 +239,16 @@ const CoursesPage = () => {
         <div className="mx-auto max-w-5xl flex flex-col gap-10 items-center justify-center md:flex-row">
           <div>
             <h2 className="text-3xl mt-0 font-bold text-slate-800">
-              About the Courses
+            Why Exploring STEM Literacy Matters Now
             </h2>
             <p className="mt-4 text-slate-600">
-              [some content would go here... it will probably be something
-              general about who created the content, the overall hope for
-              exploring STEM literacy from a content perspective, etc. no more
-              than 3 sentences]
+            There is a pressing national and global need for the content 
+            in the Exploring STEM Literacy series to reach as many 
+            children as possible across the United States. Watch this 
+            insightful video essay by Cliff Freeman, which delves 
+            into the moral, political, and societal imperatives facing 
+            our country and world today—challenges these materials 
+            are designed to address.
             </p>
           </div>
           {/* <div className="flex-grow" /> */}

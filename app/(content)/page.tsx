@@ -1,18 +1,19 @@
-"use client"
+"use client";
 // IMAGES
-import Hexagons from "@/public/hexagons.svg"
-import Epiphany from "@/public/epiphany.png"
-import Workers from "@/public/workers.png"
-import Classroom from "@/public/classroom.jpg"
-import RealWorld from "@/public/realworld.jpg"
-import Robot from "@/public/robot.jpg"
-import Bootcamp from "@/public/bootcamp.jpg"
-import BigSmiles from "@/public/bigsmiles_transparent.png"
+import Hexagons from "@/public/hexagons.svg";
+import Epiphany from "@/public/epiphany.png";
+import Workers from "@/public/workers.png";
+import Classroom from "@/public/classroom.jpg";
+import RealWorld from "@/public/realworld.jpg";
+import Robot from "@/public/robot.jpg";
+import Bootcamp from "@/public/bootcamp.jpg";
+import BigSmiles from "@/public/bigsmiles_transparent.png";
+import Amina from "@/public/Amina.jpg";
 
 // COMPONENTS
-import Image from "next/image"
-import { motion } from "framer-motion"
-import ScrollyImage from '@/components/ScrollyImage'
+import Image from "next/image";
+import { motion } from "framer-motion";
+import ScrollyImage from "@/components/ScrollyImage";
 
 export default function Example() {
   return (
@@ -93,13 +94,14 @@ export default function Example() {
           <div className="mx-auto max-w-2xl py-20 sm:pt-44 sm:pb-40 lg:pt-44 lg:pb-60">
             <div className="text-center">
               <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Turning students into leaders, shaping the future of STEM
+                Transforming students into leaders, shaping the future of STEM
               </h1>
               <p className="mt-6 text-lg md:text-xl leading-8">
-                Exploring STEM Literacy is a series of integrated Math
-                and Computer Science modules designed to equip high
-                school students with essential math and coding skills,
-                empowering them to teach these skills to their younger peers.
+                The Exploring STEM Literacy Integrated Math+CS teaching and
+                learning experiences are a set of open-source materials designed
+                to equip high school students with essential math and coding
+                skills, empowering them to teach these skills to their younger
+                peers.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 {/* <a
@@ -110,11 +112,19 @@ export default function Example() {
                 </a> */}
                 <a
                   href="#about"
-                  className="z-20 text-sm font-semibold leading-6 text-white"
+                  className="z-20 text-lg font-bold leading-6 text-white"
                 >
-                  See how we do it <span aria-hidden="true">→</span>
+                  Learn how we do it <span aria-hidden="true">→</span>
                 </a>
               </div>
+              <div className="flex items-center justify-center">
+            <button
+              onClick={() => (window.location.href = "/courses")}
+              className="mt-5 bg-accent hover:bg-black transition text-white font-semibold hover:text-white py-3 px-4 rounded"
+            >
+              Go to Courses
+            </button>
+          </div>
             </div>
           </div>
         </div>
@@ -135,14 +145,13 @@ export default function Example() {
                 What is Exploring STEM Literacy?
               </h2>
               <p className="mt-4 text-slate-600 text-lg max-w-2xl">
-                Exploring STEM Literacy is a three-year elective program
-                designed for 9th to 11th graders. Students learn the
-                fundamentals of <strong>coding</strong>,{" "}
-                <strong>computational thinking</strong>, and{" "}
-                <strong>mathematical reasoning</strong>, applying these skills
-                to <strong>real-world problems.</strong> This course combines
-                classroom learning with project-based workshops, culminating in
-                a student-led boot camp.
+                Exploring STEM Literacy is designed for 9th to 11th grade
+                students. Students learn the fundamentals of{" "}
+                <strong>coding</strong>, <strong>computational thinking</strong>
+                , and <strong>mathematical reasoning</strong>, applying these
+                skills to <strong>real-world problems.</strong> This course
+                combines classroom learning with project-based workshops,
+                culminating in a student-led boot camp.
               </p>
             </div>
             <div className="flex-grow" />
@@ -174,31 +183,86 @@ export default function Example() {
               <p className="mt-4 text-slate-600 text-lg">
                 Students don't just learn; they create. From fall to spring,
                 students work on <strong>real-world projects</strong> that
-                integrate math and coding. These projects are designed to give
-                them practical experience in problem-solving and peer
+                integrate math and computer science. These projects are designed
+                to give them practical experience in problem-solving and peer
                 collaboration.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Boot Camps */}
+        {/* CS to Math */}
+        <section id="about" className="py-5 px-4 relative">
+          <div className="max-w-5xl mx-auto pt-5 flex flex-col gap-10 items-center justify-center md:flex-row ">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-800">
+                Computer Science as an on-ramp to Mathematical Understanding
+              </h2>
+              <p className="mt-4 text-slate-600 text-lg max-w-2xl">
+                One of the most beneficial aspect about the curricular materials
+                is that they expand access to computer science learning
+                opportunities by offering a radically different on-ramp for
+                students—one that does not require prior mastery in mathematics
+                but instead uses CS as a tool to deepen student mathematical
+                understanding.
+              </p>
+            </div>
+            <div className="flex-grow" />
+            <ScrollyImage
+              src={Amina}
+              alt="STEM learning"
+              width={380}
+              className="rotate-3 rounded-xl min-w-[380px]"
+              filters="brightness-125"
+            />
+          </div>
+        </section>
+
+        {/* Preparing to Lead */}
+        <section className="max-w-5xl mx-auto py-16 px-4 relative">
+          <div className="flex flex-col-reverse gap-10 items-center justify-center md:flex-row ">
+            <ScrollyImage
+              src={Bootcamp}
+              alt="STEM learning"
+              width={380}
+              className="-rotate-3 rounded-xl min-w-[380px]"
+            />
+            <div className="flex-grow" />
+            <div>
+              <h2 className="text-3xl font-bold text-slate-800">
+                Preparing to Lead
+              </h2>
+              <p className="mt-4 text-slate-600 text-lg">
+                In the spring, students prepare for an exciting challenge:{" "}
+                <strong>
+                  leading math and coding boot camps for middle-school and
+                  elementary school students.
+                </strong>{" "}
+                They design learning stations based on the course material and
+                put their facilitation skills to the test, making STEM
+                accessible to younger learners.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Leading STEM Bootcamps */}
         <section className="py-16 relative">
           <div className="max-w-5xl mx-auto px-4">
             <div className="flex flex-col gap-10 items-center justify-center md:flex-row ">
               <div>
                 <h2 className="text-3xl font-bold text-slate-800">
-                  Prepare to Lead: Spring Boot Camps
+                  Pop-Up Math & CS Boot Camps: Students as Leaders
                 </h2>
                 <p className="mt-4 text-slate-600 text-lg">
-                  In the spring, students prepare for an exciting challenge:{" "}
+                  The program concludes with a series of pop-up math and coding
+                  boot camps,{" "}
                   <strong>
-                    leading math and coding boot camps for middle-school
-                    students.
+                    organized and implemented by the high school students.
                   </strong>{" "}
-                  They design learning stations based on the course material and
-                  put their facilitation skills to the test, making STEM
-                  accessible to younger learners.
+                  This event is a celebration of their learning, where they
+                  share their knowledge with younger students, parents, and
+                  teachers.
                 </p>
               </div>
               <div className="flex-grow" />
@@ -213,29 +277,19 @@ export default function Example() {
           </div>
         </section>
 
-        {/* Culminating Event */}
-        <section className="max-w-5xl mx-auto py-16 px-4 relative">
-          <div className="flex flex-col-reverse gap-10 items-center justify-center md:flex-row ">
-            <ScrollyImage
-              src={Bootcamp}
-              alt="STEM learning"
-              width={380}
-              className="-rotate-3 rounded-xl min-w-[380px]"
-            />
-            <div className="flex-grow" />
-            <div>
-              <h2 className="text-3xl font-bold text-slate-800">
-                Pop-Up Boot Camp: Students as Leaders
-              </h2>
-              <p className="mt-4 text-slate-600 text-lg">
-                The program concludes with a pop-up math and coding boot camp,{" "}
-                <strong>
-                  organized and implemented by the high school students.
-                </strong>{" "}
-                This event is a celebration of their learning, where they share
-                their knowledge with younger students, parents, and teachers.
-              </p>
-            </div>
+        <section className="pb-16 relative">
+          <div>
+            <h2 className="text-3xl font-bold text-slate-800 text-center">
+              Checkout The Content
+            </h2>
+          </div>
+          <div className="flex items-center justify-center">
+            <button
+              onClick={() => (window.location.href = "/courses")}
+              className="mt-5 bg-accent hover:bg-black transition text-white font-semibold hover:text-white py-3 px-4 rounded"
+            >
+              Go to Courses
+            </button>
           </div>
         </section>
       </main>

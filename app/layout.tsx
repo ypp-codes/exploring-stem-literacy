@@ -24,11 +24,11 @@ const MonaspaceArgon_Regular = localFont({
 export const metadata: Metadata = {
   title: "Exploring STEM Literacy",
   description:
-    "Teaching high schoolers STEM skills and empowers them to teach their peers. A project offered by The Young People's Project.",
+    "Teaching high schoolers STEM skills and empowering them to teach their peers. A project offered by The Young People's Project.",
   openGraph: {
     title: "Exploring STEM Literacy",
     description:
-      "Teaching high schoolers STEM skills and empowers them to teach their peers.",
+      "Teaching high schoolers STEM skills and empowering them to teach their peers.",
     images: "/preview.jpg", // Path to image in `public`
     url: "https://cs.typp.org",
   },
