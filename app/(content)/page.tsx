@@ -8,7 +8,7 @@ import RealWorld from "@/public/realworld.jpg";
 import Robot from "@/public/robot.jpg";
 import Bootcamp from "@/public/bootcamp.jpg";
 import BigSmiles from "@/public/bigsmiles_transparent.png";
-import Amina from "@/public/Amina.jpg";
+import Amina from "@/public/amina.jpg";
 
 // COMPONENTS
 import Image from "next/image";
@@ -118,13 +118,13 @@ export default function Example() {
                 </a>
               </div>
               <div className="flex items-center justify-center">
-            <button
-              onClick={() => (window.location.href = "/courses")}
-              className="mt-5 bg-accent hover:bg-black transition text-white font-semibold hover:text-white py-3 px-4 rounded"
-            >
-              Go to Courses
-            </button>
-          </div>
+                <button
+                  onClick={() => (window.location.href = "/courses")}
+                  className="mt-5 bg-accent hover:bg-black transition text-white font-semibold hover:text-white py-3 px-4 rounded"
+                >
+                  Go to Courses
+                </button>
+              </div>
             </div>
           </div>
         </div>
