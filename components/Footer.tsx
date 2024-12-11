@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
           {/* Video Section */}
           <div className="flex items-center justify-center pb-10 ">
             <h2 className="text-3xl font-bold white">
-              Check out the work in actionn:
+              Check out the work in action:
             </h2>
           </div>
           <div className="max-w-4xl mx-auto px-6 flex flex-col gap-3 items-center justify-center md:flex-row">
