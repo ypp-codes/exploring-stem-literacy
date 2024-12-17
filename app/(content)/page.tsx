@@ -145,8 +145,8 @@ export default function Example() {
                 What is Exploring STEM Literacy?
               </h2>
               <p className="mt-4 text-slate-600 text-lg max-w-2xl">
-                Exploring STEM Literacy is designed for 9th to 11th grade
-                students. Students learn the fundamentals of{" "}
+              Exploring STEM Literacy is a course designed for 9th to 11th grade students. 
+              Students learn the fundamentals of{" "}
                 <strong>coding</strong>, <strong>computational thinking</strong>
                 , and <strong>mathematical reasoning</strong>, applying these
                 skills to <strong>real-world problems.</strong> This course

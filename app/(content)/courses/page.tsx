@@ -24,11 +24,12 @@ const PythonSection = () => (
     </p>
     <h3>How is the course structured?</h3>
     <p>
-      The course starts with foundational concepts like variables, loops, conditionals,
-      and functions, gradually building up to more complex topics such as data
-      handling and applications that solve real world problems. Many of the experiences include
-      peer-teaching exercises, where students work in pairs or small groups to
-      reinforce their understanding by explaining concepts to one another.
+      The course starts with foundational concepts like variables, loops,
+      conditionals, and functions, gradually building up to more complex topics
+      such as data handling and applications that solve real world problems.
+      Many of the experiences include peer-teaching exercises, where students
+      work in pairs or small groups to reinforce their understanding by
+      explaining concepts to one another.
     </p>
   </>
 );
@@ -86,23 +87,25 @@ const CSSection = () => (
     </h2>
     <h3>What is CS For All?</h3>
     <p>
-      In 2020, YPP was awarded a National Science Foundation grant to develop a research-practice partnership 
-      that aimed to increase the number of high school computer science teachers through a professional
-      development model that uses culturally relevant pedagogy and integration
-      into mathematics classrooms. Since then, we have augmented the Bootstrap:Algebra curriculum that math teacher 
-      can utilize in their classrooms to deepen student understanding of functions. 
+      In 2020, YPP was awarded a National Science Foundation grant to develop a
+      research-practice partnership that aimed to increase the number of high
+      school computer science teachers through a professional development model
+      that uses culturally relevant pedagogy and integration into mathematics
+      classrooms. Since then, we have augmented the Bootstrap:Algebra curriculum
+      that math teacher can utilize in their classrooms to deepen student
+      understanding of functions.
     </p>
     <h3>Why Bootstrap:Algebra?</h3>
     <p>
-    We like the Bootstrap: Algebra curriculum because students deeply engage with 
-    the fundamental mathematical concept of functions. By creating video games, 
-    designing shapes, and learning through trial and error, they master essential 
-    algebraic principles, including order of operations, function composition, 
-    function definition, inequalities, piecewise functions, and the distance formula. 
-    Alongside these mathematical skills, students also explore key computer 
-    science concepts like reactive programming, data types, testing, and code 
-    reviews, making the learning experience both interdisciplinary and practical.{" "}
-      
+      We like the Bootstrap: Algebra curriculum because students deeply engage
+      with the fundamental mathematical concept of functions. By creating video
+      games, designing shapes, and learning through trial and error, they master
+      essential algebraic principles, including order of operations, function
+      composition, function definition, inequalities, piecewise functions, and
+      the distance formula. Alongside these mathematical skills, students also
+      explore key computer science concepts like reactive programming, data
+      types, testing, and code reviews, making the learning experience both
+      interdisciplinary and practical.{" "}
     </p>
   </>
 );
@@ -149,8 +152,9 @@ const CoursesPage = () => {
     <div className="prose max-w-3xl mx-auto px-3 py-8">
       <h1>Courses</h1>
       <p>
-        The Exploring STEM Literacy experiences cover a variety of content areas,
-        equipping students with skills from various parts of the STEM world.
+        The Exploring STEM Literacy experiences cover a variety of content
+        areas, equipping students with skills from various parts of the STEM
+        world.
       </p>
       <p>
         There are currently <strong>4</strong> courses available. Click one to
@@ -239,25 +243,29 @@ const CoursesPage = () => {
         <div className="mx-auto max-w-5xl flex flex-col gap-10 items-center justify-center md:flex-row">
           <div>
             <h2 className="text-3xl mt-0 font-bold text-slate-800">
-            Why Exploring STEM Literacy Matters Now
+              Why Exploring STEM Literacy Matters Now
             </h2>
             <p className="mt-4 text-slate-600">
-            There is a pressing national and global need for the content 
-            in the Exploring STEM Literacy series to reach as many 
-            children as possible across the United States. Watch this 
-            insightful video essay by Cliff Freeman, which delves 
-            into the moral, political, and societal imperatives facing 
-            our country and world today—challenges these materials 
-            are designed to address.
+              There is a pressing national and global need for the content in
+              the Exploring STEM Literacy series to reach as many children as
+              possible across the United States. Watch this insightful video
+              essay by Cliff Freeman, which delves into the moral, political,
+              and societal imperatives facing our country and world
+              today—challenges these materials are designed to address.
             </p>
           </div>
           {/* <div className="flex-grow" /> */}
-          <Image
-            src={Robot}
-            alt="STEM learning"
-            width={300}
-            className="rotate-3 rounded-xl min-w-[300px] filter brightness-125"
-          />
+        </div>
+        <div>
+        <iframe
+            src="https://www.youtube.com/embed/EWUxKhSsDPQ?si=rnUtZAwkpQ4vyIJl"
+            title="STEM Learning Video"
+            width="100%"
+            height="419" // Adjust height to maintain aspect ratio (16:9)
+            className=" rounded-xl filter"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
       <section className="py-8 relative">
