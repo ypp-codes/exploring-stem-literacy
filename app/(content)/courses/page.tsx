@@ -256,13 +256,11 @@ const CoursesPage = () => {
           </div>
           {/* <div className="flex-grow" /> */}
         </div>
-        <div>
-        <iframe
+        <div className="aspect-video">
+          <iframe
             src="https://www.youtube.com/embed/EWUxKhSsDPQ?si=rnUtZAwkpQ4vyIJl"
             title="STEM Learning Video"
-            width="100%"
-            height="419" // Adjust height to maintain aspect ratio (16:9)
-            className=" rounded-xl filter"
+            className="rounded-xl w-full h-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
